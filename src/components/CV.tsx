@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, Eye, FileText } from "lucide-react";
-import cvPdf from "@/assets/somphoneXayyalathCV.pdf";
 
 const CV = () => {
   const handleViewCV = () => {
-    window.open(cvPdf, "_blank");
+    window.open("/somphoneXayyalathCV.pdf", "_blank");
   };
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = cvPdf;
+    link.href = "/somphoneXayyalathCV.pdf";
     link.download = "Somphone_Xayyalath_CV.pdf";
     link.click();
   };
