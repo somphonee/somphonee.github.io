@@ -4,32 +4,67 @@ import { Code, GraduationCap, Briefcase } from "lucide-react";
 
 const About = () => {
   const skills = [
-    "React", "TypeScript", "Node.js", "Python", "AWS", "Docker",
-    "MongoDB", "PostgreSQL", "GraphQL", "Next.js", "Tailwind CSS"
+    "Java","Go","C#","React","PHP","Dart","Python","TypeScript","Javascript","HTML","CSS",
+    "Spring Boot","Node.js","Fiber","Laravel","Flutter","Express.js","NestJS","Django","ASP.NET","Tailwind CSS",
+    "MySQL","PostgreSQL","SQL Server","MongoDB", "Oracle","Redis", 
+    "RESTful API","GraphQL","Socket",
+    "Google Cloud","AWS", "Docker","Podman","Kubernetes","Helm","Rancher","Harbor","Nexus",
+    "Jenkins","Grafana","Elastic","SonarQube","Maven","JUnit","PostMan","jira",
+    "Git","GitHub","GitLab","CI/CD",
+    "Agile Methodologies","Sprint Planning","Code Reviews"
   ];
 
   const experiences = [
     {
       icon: <Briefcase className="h-6 w-6" />,
-      title: "Senior Software Engineer",
-      company: "TechCorp Inc.",
-      period: "2022 - Present",
-      description: "Lead development of microservices architecture serving 1M+ users"
+      title: "Software Developer",
+      company: "Agricultural Promotion Bank Co.,Ltd",
+      period: "2025 - Present",
+      description: "Built responsive web apps using TypeScript (React) Developed secure REST APIs with Spring Boot, integrated with MySQL, and connected to external vendor systems for fund transfers and payment methods. Supported CI/CD pipelines for automated testing and deployments using GitLab CI."
+    },
+     {
+      icon: <Briefcase className="h-6 w-6" />,
+      title: "Software Developer",
+      company: "SB Lab 856 Co., Ltd",
+      period: "2023 - Present",
+      description: "Developed and Maintained Microservices and Monolith"
+    },
+    {
+      icon: <Briefcase className="h-6 w-6" />,
+      title: "Backend Developer",
+      company: " Infinitech Sole Co., Ltd, a Subsidiary of Prior Solution Co., Ltd",
+      period: "2023 - 2025",
+      description: "Developed and Maintained RESTful APIs using Java Spring Boot, GO, React. Built scalable Microservices and implemented Docker for containerization. Created reports with JasperReports to support business decisions. Collaborated in Agile teams for code reviews and sprint planning. projects include developing the Krungsri Smart Merchant system, DDMP E-Report, SCB AST : Auto Sale Tools TPSO"
+    },
+   {
+      icon: <Briefcase className="h-6 w-6" />,
+      title: "Printing",
+      company: "seven digital sole co.ltd",
+      period: "2019 - 2023",
+      description: " Printing EDL Bill path time"
     },
     {
       icon: <Code className="h-6 w-6" />,
-      title: "Full Stack Developer", 
-      company: "StartupXYZ",
-      period: "2020 - 2022",
-      description: "Built and maintained React applications with Node.js backends"
+      title: "Internship Dataannatation", 
+      company: "Startup deepvisions.co.kr",
+      period: "2022",
+      description: " In recognition of the valuable contribution made to “data annotation”  project which including: drawing bounding box on targeted object.collecting images for model training. drawing polygon on selected object and so on"
     },
     {
       icon: <GraduationCap className="h-6 w-6" />,
-      title: "Computer Science Degree",
-      company: "University of Technology",
-      period: "2016 - 2020",
-      description: "Bachelor's degree with focus on software engineering and algorithms"
+      title: "Computer Sciences Degree",
+      company: "National University of Laos, Faculty Of Natural Sciences, Department Of Computer Programming",
+      period: "2021 - 2023",
+      description: "Bachelor's degree with focus on software engineering, algorithms, AI"
+    },
+     {
+      icon: <GraduationCap className="h-6 w-6" />,
+      title: "General English Degree",
+      company: "Thipvaly College ",
+      period: "2021 - 2023",
+      description: "Higher Diploma degree with focus on English language "
     }
+
   ];
 
   return (
