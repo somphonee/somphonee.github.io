@@ -7,17 +7,17 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
-      url: "https://github.com/alexjohnson"
+      url: "https://github.com/somphonee"
     },
     {
       name: "LinkedIn", 
       icon: <Linkedin className="h-5 w-5" />,
-      url: "https://linkedin.com/in/alexjohnson"
+      url: "https://www.linkedin.com/in/somphone-xayyalath"
     },
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
-      url: "mailto:alex.johnson@example.com"
+      url: "mailto:sp.xayyalath@gmail.com"
     }
   ];
 
@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo and tagline */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold glow-text mb-2">Alex Johnson</h3>
+            <h3 className="text-xl font-bold glow-text mb-2"> Somphone Xayyalath</h3>
             <p className="text-muted-foreground">Software Engineer</p>
           </div>
 
@@ -53,9 +53,8 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border/50 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} Alex Johnson. Made with 
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            and React
+            © {currentYear} Somphone Xayyalath
+  
           </p>
         </div>
       </div>
