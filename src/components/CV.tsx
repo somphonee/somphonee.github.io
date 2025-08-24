@@ -1,18 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, Eye, FileText } from "lucide-react";
+import cvPdf from "@/assets/somphoneXayyalathCV.pdf";
 
 const CV = () => {
   const handleViewCV = () => {
-    // In a real application, this would open a PDF viewer
-    window.open("/sample-cv.pdf", "_blank");
+    window.open(cvPdf, "_blank");
   };
 
   const handleDownloadCV = () => {
-    // In a real application, this would trigger a download
     const link = document.createElement("a");
-    link.href = "/sample-cv.pdf";
-    link.download = "Alex_Johnson_Resume.pdf";
+    link.href = cvPdf;
+    link.download = "Somphone_Xayyalath_CV.pdf";
     link.click();
   };
 

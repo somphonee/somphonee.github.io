@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Send, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -37,6 +37,12 @@ const Contact = () => {
   };
 
   const socialLinks = [
+    {
+      name: "Phone",
+      icon: <Phone className="h-5 w-5" />,
+      url: "tel:+8562098995586",
+      display: "+856 20 98995586"
+    },
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
