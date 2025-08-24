@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Logo and tagline */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold glow-text mb-2"> Somphone Xayyalath</h3>
-            <p className="text-muted-foreground">Software Engineer</p>
+            <p className="text-muted-foreground">Software Developer</p>
           </div>
 
           {/* Social Links */}

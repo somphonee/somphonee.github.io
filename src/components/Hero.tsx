@@ -36,7 +36,7 @@ const Hero = () => {
            Somphone Xayyalath
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6 font-light">
-            Software Engineer
+            Software Developer
           </h2>
 
           {/* Introduction */}

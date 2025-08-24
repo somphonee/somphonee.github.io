@@ -40,28 +40,29 @@ const Contact = () => {
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
-      url: "mailto:alex.johnson@example.com",
-      display: "alex.johnson@example.com"
+      url: "mailto:sp.xayyalath@gmail.com",
+      display: "sp.xayyalath@gmail.com"
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
-      url: "https://linkedin.com/in/alexjohnson",
-      display: "linkedin.com/in/alexjohnson"
+      url: "https://www.linkedin.com/in/somphone-xayyalath",
+      display: "linkedin.com/in/somphone-xayyalath"
     },
     {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
-      url: "https://github.com/alexjohnson",
-      display: "github.com/alexjohnson"
+      url: "https://github.com/somphonee",
+      display: "github.com/somphonee"
     },
     {
       name: "Twitter",
       icon: <Twitter className="h-5 w-5" />,
-      url: "https://twitter.com/alexjohnson_dev",
-      display: "@alexjohnson_dev"
+      url: "https://x.com/SpXieng",
+      display: "@SpXieng"
     }
   ];
+
 
   return (
     <section id="contact" className="py-20">
