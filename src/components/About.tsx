@@ -3,15 +3,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Code, GraduationCap, Briefcase } from "lucide-react";
 
 const About = () => {
-  const skills = [
-    "Java","Go","C#","React","PHP","Dart","Python","TypeScript","Javascript","HTML","CSS",
-    "Spring Boot","Node.js","Fiber","Laravel","Flutter","Express.js","NestJS","Django","ASP.NET","Tailwind CSS",
-    "MySQL","PostgreSQL","SQL Server","MongoDB", "Oracle","Redis", 
-    "RESTful API","GraphQL","Socket",
-    "Google Cloud","AWS", "Docker","Podman","Kubernetes","Helm","Rancher","Harbor","Nexus",
-    "Jenkins","Grafana","Elastic","SonarQube","Maven","JUnit","PostMan","jira",
-    "Git","GitHub","GitLab","CI/CD",
-    "Agile Methodologies","Sprint Planning","Code Reviews"
+  const skillGroups = [
+    {
+      category: "Programming Languages",
+      skills: ["Java", "Go", "C#", "PHP", "Dart", "Python", "TypeScript", "Javascript"]
+    },
+    {
+      category: "Frontend & Web",
+      skills: ["React", "HTML", "CSS", "Tailwind CSS", "Flutter"]
+    },
+    {
+      category: "Backend Frameworks",
+      skills: ["Spring Boot", "Node.js", "Fiber", "Laravel", "Express.js", "NestJS", "Django", "ASP.NET"]
+    },
+    {
+      category: "Databases",
+      skills: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "Oracle", "Redis"]
+    },
+    {
+      category: "APIs & Communication",
+      skills: ["RESTful API", "GraphQL", "Socket"]
+    },
+    {
+      category: "Cloud & DevOps",
+      skills: ["Google Cloud", "AWS", "Docker", "Podman", "Kubernetes", "Helm", "Rancher", "Harbor", "Nexus"]
+    },
+    {
+      category: "Tools & Testing",
+      skills: ["Jenkins", "Grafana", "Elastic", "SonarQube", "Maven", "JUnit", "PostMan", "jira"]
+    },
+    {
+      category: "Version Control & Collaboration",
+      skills: ["Git", "GitHub", "GitLab", "CI/CD", "Agile Methodologies", "Sprint Planning", "Code Reviews"]
+    }
   ];
 
   const experiences = [
@@ -97,15 +121,24 @@ const About = () => {
             {/* Skills */}
             <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4 text-primary">Technical Skills</h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <Badge 
-                    key={skill} 
-                    variant="secondary" 
-                    className="bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
-                  >
-                    {skill}
-                  </Badge>
+              <div className="space-y-6">
+                {skillGroups.map((group, groupIndex) => (
+                  <div key={groupIndex}>
+                    <h5 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      {group.category}
+                    </h5>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {group.skills.map((skill) => (
+                        <Badge 
+                          key={skill} 
+                          variant="secondary" 
+                          className="bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
