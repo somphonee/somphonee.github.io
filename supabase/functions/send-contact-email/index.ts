@@ -1,11 +1,8 @@
 
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { Resend } from "npm:resend@2.0.0";
 
-import express from "express";
-const app = express();
-app.use(express.json());
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,14 +16,14 @@ interface ContactEmailRequest {
   message: string;
 }
 
-app.options("/send-contact-email", (req, res) => {
-  res.set(corsHeaders);
-  res.sendStatus(204);
-});
+const handler = async (req: Request): Promise<Response> => {
+  // Handle CORS preflight requests
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders });
+  }
 
-app.post("/send-contact-email", async (req, res) => {
   try {
-    const { name, email, message }: ContactEmailRequest = req.body;
+    const { name, email, message }: ContactEmailRequest = await req.json();
 
     console.log("Sending contact email from:", name, email);
 
@@ -47,16 +44,23 @@ app.post("/send-contact-email", async (req, res) => {
 
     console.log("Email sent successfully:", emailResponse);
 
-    res.set(corsHeaders);
-    res.status(200).json({ success: true });
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        ...corsHeaders,
+      },
+    });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
-    res.set(corsHeaders);
-    res.status(500).json({ error: error.message });
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+    );
   }
-});
+};
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+serve(handler);
