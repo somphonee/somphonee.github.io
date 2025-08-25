@@ -86,7 +86,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <h2 className="section-title">Get In Touch</h2>
         
-        <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Contact Info */}
           <div className="fade-in">
             <h3 className="text-2xl font-semibold mb-6 text-primary">Let's Work Together</h3>
@@ -104,12 +104,12 @@ const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
+                  className="flex items-center justify-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group max-w-md mx-auto"
                 >
                   <div className="text-primary group-hover:scale-110 transition-transform">
                     {link.icon}
                   </div>
-                  <div>
+                  <div className="text-left">
                     <p className="font-medium">{link.name}</p>
                     <p className="text-sm text-muted-foreground">{link.display}</p>
                   </div>
