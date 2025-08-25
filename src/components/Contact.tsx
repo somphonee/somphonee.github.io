@@ -104,7 +104,7 @@ const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group max-w-md mx-auto"
+                  className="flex items-left justify-left gap-4 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group max-w-md mx-auto"
                 >
                   <div className="text-primary group-hover:scale-110 transition-transform">
                     {link.icon}
