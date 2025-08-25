@@ -1,38 +1,54 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
+import project1 from "@/assets/project1.png";
+import project2 from "@/assets/project2.png";
+import project3 from "@/assets/project3.png";
+import project4 from "@/assets/project4.jpg";
+import project5 from "@/assets/project5.jpg";
+import project6 from "@/assets/project6.jpg";
 
 const Projects = () => {
   const projects = [
+      {
+      title: "Krungsri Smart Merchant",
+      description: "Krungsri Smart Merchant Increase your business opportunities for your physical store or online shop. Support payment in a variety of channels with fully integrated, whether credit card, debit card or scanning QR Code via EDC or Krungsri Mung-Mee SHOP Application. Seamlessly connect with POS machine or e-commerce websites to process payments. Additionally, you can send payment requests via social media platforms.",
+      image: project1,
+      technologies: ["React", "Java Spring Boot", "Oracle", "AWS"],
+      featured: true
+    },
+      {
+      title: "AST : Auto Sale Tools",
+      description: "The Auto Sell Tools application is designed to simplify the traditional paper-based auto loan process, thus enhancing the overall auto loan experience.",
+      image: project2,
+      technologies: ["React","Flutter", "Java Spring Boot","Go", "Oracle", "AWS"],
+      featured: true
+    },
+      {
+      title: "E-Report",
+      description: "Report Accident",
+      image: project3,
+      technologies: ["React", "Java Spring Boot", "Oracle", "MinIO", "JasperReport"],
+      featured: true
+    },
     {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-      image: project1,
+      image: project4,
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      liveUrl: "https://demo-ecommerce.com",
-      githubUrl: "https://github.com/alexjohnson/ecommerce-platform",
-      featured: true
+      featured: false
     },
     {
       title: "Task Management App",
       description: "A collaborative project management tool with real-time updates, team collaboration features, and advanced task tracking.",
-      image: project2,
+      image: project5,
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-      liveUrl: "https://taskmaster-app.com",
-      githubUrl: "https://github.com/alexjohnson/task-manager",
-      featured: true
+      featured: false
     },
     {
       title: "Analytics Dashboard",
       description: "A comprehensive analytics dashboard for business intelligence with interactive charts, real-time data visualization, and custom reporting.",
-      image: project3,
+      image: project6,
       technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL", "Docker"],
-      liveUrl: "https://analytics-pro.com",
-      githubUrl: "https://github.com/alexjohnson/analytics-dashboard",
       featured: false
     }
   ];
@@ -41,7 +57,6 @@ const Projects = () => {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
         <h2 className="section-title">Featured Projects</h2>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="project-card group overflow-hidden">
@@ -58,7 +73,6 @@ const Projects = () => {
                   </Badge>
                 )}
               </div>
-              
               <CardHeader>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {project.title}
@@ -67,7 +81,6 @@ const Projects = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              
               <CardContent>
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -81,40 +94,9 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
-                
-                {/* Action Buttons */}
-                <div className="flex gap-3">
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                    asChild
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="border-primary/50 text-primary hover:bg-primary/10"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
+            </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Button variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
-            <Github className="mr-2 h-4 w-4" />
-            View More on GitHub
-          </Button>
         </div>
       </div>
     </section>
