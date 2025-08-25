@@ -49,15 +49,15 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      name: "Phone",
+      name: "Phone / WhatsApp",
       icon: <Phone className="h-5 w-5" />,
-      url: "tel:+8562098995586",
+      url: "https://wa.me/message/BPDUJ2BG7RPIE1",
       display: "+856 20 98995586"
     },
     {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
-      url: "mailto:sp.xayyalath@gmail.com",
+      url: "https://mail.google.com/mail/?view=cm&to=sp.xayyalath@gmail.com",
       display: "sp.xayyalath@gmail.com"
     },
     {
