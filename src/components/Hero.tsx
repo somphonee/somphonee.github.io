@@ -41,7 +41,7 @@ const Hero = () => {
 
           {/* Introduction */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Passionate full-stack developer with 5+ years of experience building scalable web applications.
+            Passionate full-stack developer with 3+ years of experience building scalable web applications.
             Specialized in React, Node.js, and cloud technologies. I love turning complex problems into
             simple, elegant solutions.
           </p>
