@@ -102,7 +102,7 @@ const About = () => {
             <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate software engineer with over 5 years of experience creating 
+                I'm a passionate software engineer with over 3+ years of experience creating 
                 digital solutions that make a difference. My journey began during university 
                 where I discovered my love for coding and problem-solving.
               </p>

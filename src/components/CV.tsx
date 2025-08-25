@@ -54,7 +54,7 @@ const CV = () => {
               </div>
               
               <div className="text-center text-sm text-muted-foreground">
-                <p>Last updated: December 2024</p>
+                <p>Last updated: December 2025</p>
                 <p>File size: 245 KB</p>
               </div>
             </CardContent>
@@ -64,14 +64,14 @@ const CV = () => {
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             <Card className="text-center p-6">
               <CardContent className="pt-0">
-                <h3 className="text-2xl font-bold text-primary mb-2">5+</h3>
+                <h3 className="text-2xl font-bold text-primary mb-2">3+</h3>
                 <p className="text-muted-foreground">Years Experience</p>
               </CardContent>
             </Card>
             
             <Card className="text-center p-6">
               <CardContent className="pt-0">
-                <h3 className="text-2xl font-bold text-primary mb-2">50+</h3>
+                <h3 className="text-2xl font-bold text-primary mb-2">15+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </CardContent>
             </Card>
