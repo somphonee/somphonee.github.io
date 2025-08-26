@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Facebook, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,6 +18,21 @@ const Footer = () => {
       name: "Email",
       icon: <Mail className="h-5 w-5" />,
       url: "mailto:sp.xayyalath@gmail.com"
+    },
+    {
+      name: "Phone",
+      icon: <Phone className="h-5 w-5" />,
+      url: "https://wa.me/message/BPDUJ2BG7RPIE1"
+    },
+    {
+      name: "Twitter",
+      icon: <Twitter className="h-5 w-5" />,
+      url: "https://x.com/SpXieng"
+    },
+    {
+      name: "Facebook",
+      icon: <Facebook className="h-5 w-5" />,
+      url: "https://www.facebook.com/somphone.xayyalath.2025",
     }
   ];
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Github, Linkedin, Twitter, Send, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Facebook, Phone } from "lucide-react";
 
 const Contact = () => {
   const socialLinks = [
@@ -8,6 +8,12 @@ const Contact = () => {
       icon: <Phone className="h-5 w-5" />,
       url: "https://wa.me/message/BPDUJ2BG7RPIE1",
       display: "+856 20 98995586"
+    },
+     {
+      name: "Facebook",
+      icon: <Facebook className="h-5 w-5" />,
+      url: "https://www.facebook.com/somphone.xayyalath.2025",
+      display: "somphone Xayyalath"
     },
     {
       name: "Email",
